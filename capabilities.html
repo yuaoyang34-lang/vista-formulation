@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capabilities & Dosage Forms | Vista Formulation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            900: '#060D1A',
+                            800: '#0B172A',
+                            700: '#142540'
+                        },
+                        tealAccent: {
+                            600: '#0D9488',
+                            500: '#14B8A6',
+                            400: '#2DD4BF',
+                            50: '#F0FDFA'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(12px);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-teal-500 selection:text-white flex flex-col min-h-screen">
+
+    <!-- TOP ANNOUNCEMENT BAR -->
+    <div class="bg-navy-900 text-slate-300 text-xs py-2 px-6">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+            <div class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-teal-400"></span>
+                <span class="font-medium tracking-wide">cGMP Compliant & FDA Registered Facility</span>
+            </div>
+            <div class="flex items-center gap-6">
+                <span class="text-slate-400">4488 Mission Blvd, Montclair, CA</span>
+                <span class="text-slate-700">|</span>
+                <a href="mailto:contact@vistaformulation.com" class="hover:text-teal-400 transition-colors flex items-center gap-1.5 font-medium">
+                    <i class="fa-solid fa-envelope text-[11px] text-teal-400"></i> contact@vistaformulation.com
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- NAVIGATION -->
+    <header class="sticky top-0 z-50 glass-nav border-b border-slate-200/80 transition-all">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3 group shrink-0">
+                <div class="w-10 h-10 rounded-lg bg-navy-900 text-teal-400 flex items-center justify-center font-bold text-xl tracking-tighter shadow-sm group-hover:bg-teal-600 group-hover:text-white transition-colors">
+                    VF
+                </div>
+                <div>
+                    <span class="text-lg font-bold tracking-tight text-navy-900 block leading-none">Vista Formulation</span>
+                    <span class="text-[11px] font-medium uppercase tracking-widest text-slate-500 mt-0.5 block">Contract Manufacturing</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden xl:flex items-center space-x-6 text-xs font-semibold uppercase tracking-wider text-slate-600">
+                <a href="index.html" class="hover:text-teal-600 transition-colors">Home</a>
+                <a href="about.html" class="hover:text-teal-600 transition-colors">About Us</a>
+                <a href="capabilities.html" class="text-teal-600 font-bold border-b-2 border-teal-600 pb-1 transition-colors">Capabilities</a>
+                <a href="packaging.html" class="hover:text-teal-600 transition-colors">Packaging</a>
+                <a href="process.html" class="hover:text-teal-600 transition-colors">Process</a>
+                <a href="quality.html" class="hover:text-teal-600 transition-colors">Quality</a>
+                <a href="estimator.html" class="hover:text-teal-600 transition-colors">Estimator</a>
+                <a href="faq.html" class="hover:text-teal-600 transition-colors">FAQ</a>
+            </nav>
+
+            <!-- CTA & Mobile Toggle -->
+            <div class="flex items-center gap-4">
+                <a href="contact.html" class="hidden sm:inline-block bg-navy-900 hover:bg-teal-600 text-white text-xs font-bold uppercase tracking-wider px-5 py-3 rounded-lg shadow-sm transition-all duration-200">
+                    Request Quote
+                </a>
+                <button onclick="toggleMobileMenu()" class="xl:hidden text-navy-900 p-2 rounded-lg hover:bg-slate-100 focus:outline-none">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Dropdown Navigation -->
+        <div id="mobileMenu" class="hidden xl:hidden bg-white border-t border-slate-200 px-6 py-4 space-y-3 shadow-lg">
+            <a href="index.html" class="block text-sm font-semibold text-slate-700 hover:text-teal-600 py-1">Home</a>
+            <a href="about.html" class="block text-sm font-semibold text-slate-700 hover:text-teal-600 py-1">About Us</a>
+            <a href="capabilities.html" class="block text-sm font-semibold text-slate-700 hover:text-teal-600 py-1">Capabilities & Dosage Forms</a>
+            <a href="packaging.html" class="block text-sm font-semibold text-slate-700 hover:text-teal-600 py-1">Packaging Solutions</a>
+            <a href="process.html" class="block text-sm font-semibold text-slate-700 hover:text-teal-600 py-1">Turnkey Process</a>
+            <a href="quality.html" class="block text-sm font-semibold text-slate-700 hover:text-teal-600 py-1">Quality & Compliance</a>
+            <a href="estimator.html" class="block text-sm font-semibold text-slate-700 hover:text-teal-600 py-1">Quote Estimator</a>
+            <a href="faq.html" class="block text-sm font-semibold text-slate-700 hover:text-teal-600 py-1">FAQ</a>
+            <a href="contact.html" class="block bg-teal-600 text-white text-center text-xs font-bold uppercase tracking-wider py-3 rounded-lg mt-2">Inquire For Production</a>
+        </div>
+    </header>
+    <main class="flex-grow">
+
+    <section class="py-16 bg-navy-900 text-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <span class="text-xs font-bold text-teal-400 uppercase tracking-widest">Production Excellence</span>
+            <h1 class="text-3xl sm:text-5xl font-extrabold mt-2">Core Dosage Forms & Capabilities</h1>
+            <p class="text-slate-300 mt-4 max-w-2xl text-sm sm:text-base">
+                State-of-the-art machinery capable of precise powder blending, high-volume encapsulation, softgels, gummies, and liquid dosing.
+            </p>
+        </div>
+    </section>
+
+    <section class="py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Capsules -->
+                <div class="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-teal-50 text-teal-600 flex items-center justify-center text-xl mb-6">
+                            <i class="fa-solid fa-capsules"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-navy-900 mb-2">Capsules</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                            Precision encapsulation for dry powders, herbal extracts, and custom nutrient blends. Available in gelatin, vegetarian HPMC, and delayed-release shells across sizes #000 through #4.
+                        </p>
+                        <ul class="text-xs text-slate-500 space-y-1.5 mb-6">
+                            <li>• Automatic check-weighing & polishing</li>
+                            <li>• Vegan, Kosher & Halal shell options</li>
+                        </ul>
+                    </div>
+                    <div class="border-t border-slate-100 pt-4 flex justify-between items-center text-xs font-semibold text-slate-500">
+                        <span>MOQ: 5,000 Units</span>
+                        <a href="estimator.html" class="text-teal-600 hover:underline flex items-center gap-1">Configure <i class="fa-solid fa-chevron-right text-[9px]"></i></a>
+                    </div>
+                </div>
+
+                <!-- Tablets -->
+                <div class="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-teal-50 text-teal-600 flex items-center justify-center text-xl mb-6">
+                            <i class="fa-solid fa-tablets"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-navy-900 mb-2">Tablets</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                            High-speed rotary compression yielding exact hardness, disintegration times, and optional aqueous, enteric, or chewable coatings.
+                        </p>
+                        <ul class="text-xs text-slate-500 space-y-1.5 mb-6">
+                            <li>• Round, oval, oblong & custom tooling</li>
+                            <li>• Sustained-release & chewable formulations</li>
+                        </ul>
+                    </div>
+                    <div class="border-t border-slate-100 pt-4 flex justify-between items-center text-xs font-semibold text-slate-500">
+                        <span>MOQ: 5,000 Units</span>
+                        <a href="estimator.html" class="text-teal-600 hover:underline flex items-center gap-1">Configure <i class="fa-solid fa-chevron-right text-[9px]"></i></a>
+                    </div>
+                </div>
+
+                <!-- Powders -->
+                <div class="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-teal-50 text-teal-600 flex items-center justify-center text-xl mb-6">
+                            <i class="fa-solid fa-mortar-pestle"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-navy-900 mb-2">Powders & Blends</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                            Homogeneous commercial ribbon and V-blending for protein powders, pre-workouts, superfood greens, collagen, and electrolyte mixes.
+                        </p>
+                        <ul class="text-xs text-slate-500 space-y-1.5 mb-6">
+                            <li>• Custom flavor masking & sweetness profiling</li>
+                            <li>• Automated auger filling into tubs or pouches</li>
+                        </ul>
+                    </div>
+                    <div class="border-t border-slate-100 pt-4 flex justify-between items-center text-xs font-semibold text-slate-500">
+                        <span>MOQ: 1,000 Units</span>
+                        <a href="estimator.html" class="text-teal-600 hover:underline flex items-center gap-1">Configure <i class="fa-solid fa-chevron-right text-[9px]"></i></a>
+                    </div>
+                </div>
+
+                <!-- Gummies -->
+                <div class="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-teal-50 text-teal-600 flex items-center justify-center text-xl mb-6">
+                            <i class="fa-solid fa-cubes-stacked"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-navy-900 mb-2">Gummies</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                            Pectin and gelatin-based gummy manufacturing with exquisite natural fruit flavor profiles, consistent active dosing, and sugar-free options.
+                        </p>
+                        <ul class="text-xs text-slate-500 space-y-1.5 mb-6">
+                            <li>• Vegan pectin & zero-sugar alternatives</li>
+                            <li>• Sugar-sanded or carnauba wax finishing</li>
+                        </ul>
+                    </div>
+                    <div class="border-t border-slate-100 pt-4 flex justify-between items-center text-xs font-semibold text-slate-500">
+                        <span>MOQ: 5,000 Units</span>
+                        <a href="estimator.html" class="text-teal-600 hover:underline flex items-center gap-1">Configure <i class="fa-solid fa-chevron-right text-[9px]"></i></a>
+                    </div>
+                </div>
+
+                <!-- Softgels -->
+                <div class="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-teal-50 text-teal-600 flex items-center justify-center text-xl mb-6">
+                            <i class="fa-solid fa-droplet"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-navy-900 mb-2">Softgels</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                            Hermetically sealed softgel encapsulation for oil-based nutrients, fat-soluble vitamins (D3, K2, E), Omega-3 fish oils, and CoQ10.
+                        </p>
+                        <ul class="text-xs text-slate-500 space-y-1.5 mb-6">
+                            <li>• Enhanced bioavailability & oxidation protection</li>
+                            <li>• Clear, tinted & enteric softgel shells</li>
+                        </ul>
+                    </div>
+                    <div class="border-t border-slate-100 pt-4 flex justify-between items-center text-xs font-semibold text-slate-500">
+                        <span>MOQ: 5,000 Units</span>
+                        <a href="estimator.html" class="text-teal-600 hover:underline flex items-center gap-1">Configure <i class="fa-solid fa-chevron-right text-[9px]"></i></a>
+                    </div>
+                </div>
+
+                <!-- Liquids & Tinctures -->
+                <div class="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-teal-50 text-teal-600 flex items-center justify-center text-xl mb-6">
+                            <i class="fa-solid fa-vial"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-navy-900 mb-2">Liquids & Tinctures</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                            Automated liquid filling lines for sublingual dietary drops, liposomal vitamins, herbal tinctures, and functional shots.
+                        </p>
+                        <ul class="text-xs text-slate-500 space-y-1.5 mb-6">
+                            <li>• Calibrated glass droppers & tamper-evident seals</li>
+                            <li>• Alcohol-free glycerin & MCT oil bases</li>
+                        </ul>
+                    </div>
+                    <div class="border-t border-slate-100 pt-4 flex justify-between items-center text-xs font-semibold text-slate-500">
+                        <span>MOQ: 2,500 Units</span>
+                        <a href="estimator.html" class="text-teal-600 hover:underline flex items-center gap-1">Configure <i class="fa-solid fa-chevron-right text-[9px]"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    </main>
+    <!-- FOOTER -->
+    <footer class="bg-black text-slate-500 py-12 text-xs border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex items-center gap-3">
+                <div class="w-8 h-8 rounded bg-teal-500 text-navy-900 font-bold flex items-center justify-center text-sm">VF</div>
+                <span class="text-slate-300 font-bold">Vista Formulation © 2026. All Rights Reserved.</span>
+            </div>
+            <div class="flex flex-wrap justify-center gap-5">
+                <a href="index.html" class="hover:text-slate-300">Home</a>
+                <a href="about.html" class="hover:text-slate-300">About</a>
+                <a href="capabilities.html" class="hover:text-slate-300">Capabilities</a>
+                <a href="packaging.html" class="hover:text-slate-300">Packaging</a>
+                <a href="process.html" class="hover:text-slate-300">Process</a>
+                <a href="quality.html" class="hover:text-slate-300">Quality</a>
+                <a href="estimator.html" class="hover:text-slate-300">Estimator</a>
+                <a href="faq.html" class="hover:text-slate-300">FAQ</a>
+                <a href="contact.html" class="hover:text-slate-300">Contact</a>
+                <span>•</span>
+                <span>4488 Mission Blvd, Montclair, CA</span>
+                <span>•</span>
+                <a href="mailto:contact@vistaformulation.com" class="text-teal-400 hover:underline">contact@vistaformulation.com</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+    </script>
+    
+</body>
+</html>
